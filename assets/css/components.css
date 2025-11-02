@@ -1,0 +1,40 @@
+/* Componentes: botões, formulários, alerts, badges, modals, toasts */
+
+/* Botões */
+.btn{
+  display:inline-block;padding:10px 16px;border-radius:8px;border:none;cursor:pointer;font-weight:600;text-decoration:none;
+}
+.btn.primary{background:var(--color-primary);color:white}
+.btn.secondary{background:transparent;border:1px solid var(--color-neutral-300);color:var(--color-neutral-900)}
+.btn:disabled{opacity:0.5;cursor:not-allowed}
+.btn:focus{outline:3px solid color-mix(in srgb, var(--color-primary) 30%, white)}
+
+/* Formulários */
+.form-card{background:white;padding:var(--space-md);border-radius:10px;max-width:640px}
+.form-card label{display:block;margin-top:var(--space-sm);font-weight:600}
+.form-card input, .form-card select, .form-card textarea{width:100%;padding:10px;border:1px solid var(--color-neutral-300);border-radius:6px;margin-top:6px}
+.form-card input:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--color-primary) 10%, transparent)}
+
+/* Validação visual (HTML5 pseudo-classes) */
+input:required:invalid{border-color:#e11d48;background: #fff1f2}
+input:required:valid{border-color:var(--color-accent);background: #f0fffa}
+
+/* Alerts */
+.alert{padding:12px 16px;border-radius:8px;margin-top:8px}
+.alert.success{background:#ecfdf5;border:1px solid #34d399;color:#065f46}
+.alert.info{background:#eff6ff;border:1px solid #60a5fa;color:#0b5394}
+.alert.error{background:#fff1f2;border:1px solid #fca5a5;color:#7f1d1d}
+
+/* Badges & tags */
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--color-neutral-300);color:var(--color-neutral-900);font-weight:600;margin-right:8px}
+.tag{background:var(--color-neutral-100);padding:6px 8px;border-radius:6px;margin-top:8px}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.5);z-index:100}
+.modal[aria-hidden="false"]{display:flex}
+.modal-content{background:white;padding:var(--space-md);border-radius:12px;max-width:600px;position:relative}
+.modal-close{position:absolute;right:12px;top:8px;border:none;background:transparent;font-size:20px;cursor:pointer}
+
+/* Toasts */
+.toasts{position:fixed;right:var(--space-sm);bottom:var(--space-sm);display:flex;flex-direction:column;gap:10px;z-index:120}
+.toast{background:white;padding:10px 14px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12);border-left:4px solid var(--color-primary)}

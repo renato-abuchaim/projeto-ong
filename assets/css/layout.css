@@ -1,0 +1,59 @@
+/* Layout: grid 12 colunas e breakpoints */
+.grid{
+  display:grid;
+  gap:var(--gutter);
+}
+
+/* Sistema de 12 colunas - utilitário simples */
+.grid.columns-12{
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Exemplo: cards 3 colunas padrão */
+.projects-preview.grid{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Imagens responsivas */
+.responsive-img, .hero-img{width:100%;height:auto;border-radius:8px}
+
+/* Header */
+.site-header{background:white;border-bottom:1px solid var(--color-neutral-300)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:var(--space-sm) 0}
+.brand{font-weight:700;color:var(--color-primary);text-decoration:none;font-size:var(--fs-lg)}
+
+/* Nav */
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:var(--space-sm);align-items:center}
+.main-nav a{text-decoration:none;color:var(--color-neutral-900);padding:8px 12px;border-radius:6px}
+.main-nav .has-sub{position:relative}
+.submenu{position:absolute;left:0;top:calc(100% + 8px);background:white;border:1px solid var(--color-neutral-300);padding:8px;display:none;min-width:180px;border-radius:8px;z-index:50}
+.has-sub:hover .submenu, .has-sub:focus-within .submenu{display:block}
+.submenu li{display:block}
+.submenu a{display:block;padding:6px 8px}
+
+/* Footer */
+.site-footer{background:var(--color-primary);color:white;padding:var(--space-md);text-align:center;margin-top:var(--space-lg)}
+
+/* Grid helper for projects list */
+.projects-list.grid{grid-template-columns:repeat(3,1fr);gap:var(--space-md)}
+.card{background:white;padding:var(--space-md);border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+.tag{display:inline-block;background:var(--color-neutral-100);padding:4px 8px;border-radius:6px;margin-top:8px;font-size:13px}
+
+/* Breakpoints: 5 pontos */
+@media (max-width:1200px){:root{--container-width:1000px}}
+@media (max-width:992px){
+  .projects-preview.grid{grid-template-columns:repeat(2,1fr)}
+  .projects-list.grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:768px){
+  .projects-preview.grid{grid-template-columns:1fr}
+  .projects-list.grid{grid-template-columns:1fr}
+  .header-inner{flex-wrap:wrap}
+  .main-nav{display:none;width:100%}
+  .main-nav.open{display:block}
+  .hamburger{display:inline-block}
+}
+@media (max-width:576px){
+  h1{font-size:26px}
+  :root{--gutter:12px}
+}

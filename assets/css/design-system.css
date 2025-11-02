@@ -1,0 +1,56 @@
+/* Design System: variáveis e tokens */
+:root{
+  /* Paleta (8 cores) */
+  --color-primary: #004aad;
+  --color-primary-700: #003580;
+  --color-secondary: #ff7a00;
+  --color-accent: #00b894;
+  --color-neutral-900: #111827;
+  --color-neutral-700: #4b5563;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-100: #f3f4f6;
+
+  /* Tipografia (5 tamanhos) */
+  --fs-xxl: 32px;
+  --fs-xl: 24px;
+  --fs-lg: 20px;
+  --fs-md: 16px;
+  --fs-sm: 14px;
+
+  /* Espaçamento (modular) */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
+
+  /* Grid */
+  --container-width: 1200px;
+  --gutter: 16px;
+}
+
+/* Reset simples */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  color:var(--color-neutral-900);
+  background:linear-gradient(180deg,var(--color-neutral-100),white);
+  font-size:var(--fs-md);
+}
+
+/* Container centralizado */
+.container{
+  max-width:var(--container-width);
+  margin:0 auto;
+  padding:0 var(--space-sm);
+}
+
+/* Tipografia */
+h1{font-size:var(--fs-xxl);margin:var(--space-lg) 0}
+h2{font-size:var(--fs-xl);margin:var(--space-md) 0}
+h3{font-size:var(--fs-lg);margin:var(--space-sm) 0}
+p{line-height:1.5;margin:var(--space-sm) 0}
+small{font-size:var(--fs-sm)}

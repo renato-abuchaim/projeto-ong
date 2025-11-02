@@ -4,33 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos Sociais - Instituto Esperança</title>
-  <link rel="stylesheet" href="assets/css/estilo.css">
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <script defer src="assets/js/main.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Projetos Sociais</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="projetos.html">Projetos</a></li>
-        <li><a href="cadastro.html">Cadastro</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Instituto Esperança</a>
+      <button class="hamburger" id="hamburger2" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="main-nav-2" aria-label="Menu principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li class="has-sub">
+            <a href="projetos.html">Projetos</a>
+            <ul class="submenu">
+              <li><a href="#voluntariado">Voluntariado</a></li>
+              <li><a href="#doar">Como Doar</a></li>
+            </ul>
+          </li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section>
+
+  <main class="container">
+    <h1>Projetos Sociais</h1>
+
+    <section id="voluntariado">
       <h2>Voluntariado</h2>
       <p>Participe como voluntário e ajude comunidades carentes com amor e solidariedade.</p>
-      <img src="assets/imagens/voluntariado.png" alt="Voluntariado" width="400">
+      <img src="assets/imagens/voluntariado.jpg" alt="Voluntariado" class="responsive-img">
     </section>
-    <section>
+
+    <section id="doar">
       <h2>Como Doar</h2>
       <p>Você pode contribuir com doações em dinheiro, alimentos ou roupas. Toda ajuda é bem-vinda!</p>
-      <img src="assets/imagens/doacao.png" alt="Doação de alimentos" width="400">
+      <div class="badges">
+        <span class="badge">Alimentos</span>
+        <span class="badge">Roupas</span>
+        <span class="badge">Financeiro</span>
+      </div>
+      <img src="assets/imagens/doacao.jpg" alt="Doação de alimentos" class="responsive-img">
+    </section>
+
+    <section class="grid projects-list">
+      <article class="card">
+        <h3>Mutirão de Limpeza</h3>
+        <p>Atividade comunitária mensal.</p>
+        <span class="tag">Comunidade</span>
+      </article>
+      <article class="card">
+        <h3>Arrecadação de Roupas</h3>
+        <p>Pontos de coleta em vários bairros.</p>
+        <span class="tag">Doação</span>
+      </article>
+      <article class="card">
+        <h3>Oficinas</h3>
+        <p>Capacitação profissional para jovens.</p>
+        <span class="tag">Educação</span>
+      </article>
     </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Instituto Esperança</p>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Instituto Esperança</p>
+    </div>
   </footer>
+
 </body>
 </html>
